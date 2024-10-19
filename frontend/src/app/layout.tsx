@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     default: "DevHost 2024",
     template: `%s - DevHost 2024`,
   },
-  description: "Where Curiosity Meets Expertise.",
+  description: "Expertise Redefined, Experience Reimagined.",
   keywords: [
     "sosc",
     "Sahyadri Open Source Community",
