@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://devhost.sosc.org.in/",
     title: "DevHost 2024",
-    description: "Where Curiosity Meets Expertise.",
+    description: "Expertise Redefined, Experience Reimagined.",
     siteName: "DevHost 2024",
     images: [
       {
