@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     siteName: "DevHost 2024",
     images: [
       {
-        url: "https://devhost.sosc.org.in/og.png",
+        url: "https://devhost.sosc.org.in/dhost_prev.png",
         width: 1200,
         height: 630,
         alt: "DevHost 2024",
