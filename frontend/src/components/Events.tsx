@@ -22,8 +22,8 @@ export default function Events() {
       description:
         "Join a dynamic web-based competition showcasing stunning UI using HTML and CSS.",
       organizer: "Koshin Hegde - 7899715941",
-      date: "7th Nov",
-      time: "11:30am - 12:45pm",
+      date: "8th Nov",
+      time: "9:00am - 10:45pm",
       imageSrc: "/events/CSS_Action.png",
     },
     {
@@ -34,7 +34,7 @@ export default function Events() {
         "Take on the ultimate coding challenge and prove your skills against top minds in the field.",
       organizer: "Nithesh Alva - 7484775694",
       date: "8th Nov",
-      time: "8:45am - 9:45am",
+      time: "9:00am - 11:00am",
       imageSrc: "/events/CodeForge.png",
     },
     {
