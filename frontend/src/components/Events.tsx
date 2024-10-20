@@ -20,7 +20,7 @@ export default function Events() {
       title: "CSS Action",
       caption: "Put your web design skills to the test!",
       description:
-        "Join a dynamic web-based competition showcasing stunning UI using HTML, CSS, and JavaScript.",
+        "Join a dynamic web-based competition showcasing stunning UI using HTML and CSS.",
       organizer: "Koshin Hegde - 7899715941",
       date: "7th Nov",
       time: "11:30am - 12:45pm",
