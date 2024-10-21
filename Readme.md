@@ -1,4 +1,4 @@
-# scARP
+# scAPE
 
 This repository is a project for QR-based registration. It is built primarily using TypeScript, with additional use of JavaScript, HTML, and the following frameworks:
 - Frontend: Next.js
