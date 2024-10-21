@@ -1,4 +1,4 @@
-# QR Registration
+# scARP
 
 This repository is a project for QR-based registration. It is built primarily using TypeScript, with additional use of JavaScript, HTML, and the following frameworks:
 - Frontend: Next.js
@@ -37,10 +37,6 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
 ## Usage
 
 This project uses `next/font` to automatically optimize and load Inter, a custom Google Font.
@@ -65,8 +61,8 @@ Contributions are welcome! Please fork this repository and submit a pull request
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the GNU GENERAL PUBLIC LICENSE Version 2.
 
 ## Contact
 
-For questions or support, please open an issue in this repository or contact the repository owner.
+For questions or support, please open an issue in this repository or contact the so-sc.
