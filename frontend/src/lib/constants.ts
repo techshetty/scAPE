@@ -261,7 +261,7 @@ export const EVENTS = [
     max_members: 2,
   },
   {
-    name: "Capture the Flag",
+    name: "Bit Breaker",
     organizer: "Yash Laxman",
     description: "Uncover clues, capture flags, and test your problem-solving skills!",
     date: "8th Nov",
