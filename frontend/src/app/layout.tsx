@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
-
 import { Toaster } from "@/components/ui/sonner";
 
 const poppins = Poppins({
@@ -13,7 +12,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: {
     default: "DevHost 2024",
-    template: `%s - DevHost 2024`,
+    template: "%s - DevHost 2024",
   },
   description: "Expertise Redefined, Experience Reimagined.",
   keywords: [
@@ -57,6 +56,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Expertise Redefined, Experience Reimagined." />
+        <meta name="keywords" content="sosc, Sahyadri Open Source Community, devhost, DevHost 2024" />
+        <meta name="creator" content="so-sc" />
+        <link rel="icon" href="/favicons/favicon.ico" />
+        <link rel="shortcut icon" href="/favicons/favicon-16x16.png" />
+        <link rel="canonical" href="https://devhost.sosc.org.in/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:url" content="https://devhost.sosc.org.in/" />
+        <meta property="og:title" content="DevHost 2024" />
+        <meta property="og:description" content="Expertise Redefined, Experience Reimagined." />
+        <meta property="og:site_name" content="DevHost 2024" />
+        <meta property="og:image" content="https://devhost.sosc.org.in/dhost_prev.png" />
+      </head>
       <body className={poppins.className}>
         {children}
         <Toaster />
