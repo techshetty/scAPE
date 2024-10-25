@@ -77,7 +77,7 @@ const scheduleData = [
       },
       {
         icon: <MicVocal />,
-        title: "The Future of Computation",
+        title: "DevTalk: The Future of Computation",
         time: "2:00 pm - 2:30 pm",
         description: "How RISC-V is shaping the future of computational systems and innovation.",
         speaker: "Suhas Kudlur Viswanath, Hardware Engineer, Arithmetic Labs",
