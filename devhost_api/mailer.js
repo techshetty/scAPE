@@ -10,7 +10,7 @@ const evn ={
     "103": "Capture the Flag",
     "104": "Sightless Synatax",
     "105": "Tech-Pitch",
-    "106": "BGMI: Battlegrounds Mobile India",
+    "106": "BGMI - Battlegrounds Mobile India",
     "107": "Valorant",
     "108": "RoboSumo (<5KG)",
     "109": "RoboSumo (>5KG)",
@@ -94,5 +94,5 @@ const sendConf = (user) => {
   sendEmail(user.email, "Devhost Confirmation", body);
 };
 module.exports = {
-    sendConf
+    sendConf,evn
 };
