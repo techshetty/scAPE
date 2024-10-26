@@ -126,6 +126,7 @@ export const COLLEGES = [
   "Karavali Institute, of Technology, Neermarga, Mangalore",
   "KCT Engineering College, Gulbarga (Religious Minority) (MUSLIM)",
   "Manipal Institute of Technology, Manipal",
+  "Mangalore Institute of Technology and Engineering(MITE), Moodabidri",
   "Nadgir Institute of Engineering and Technology, Jindal Nagar, Bangalore (2016-17)",
   "Nagarjuna College of Engineering. & Technology, Bangalore Rural Dist",
   "National Institute of Engineering (Evening), Mysore",
@@ -261,7 +262,7 @@ export const EVENTS = [
     max_members: 2,
   },
   {
-    name: "Capture the Flag",
+    name: "Bit Breaker",
     organizer: "Yash Laxman",
     description: "Uncover clues, capture flags, and test your problem-solving skills!",
     date: "8th Nov",
