@@ -1,7 +1,6 @@
 import React from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
-  Binary,
   Blocks,
   BookCheckIcon,
   Brain,
@@ -42,7 +41,7 @@ import { Code } from "mongodb";
 
 const scheduleData = [
   {
-    day: "7th November",
+    day: "7th Nov",
     events: [
       {
         icon: <Leaf />,
@@ -55,29 +54,26 @@ const scheduleData = [
       },
       {
         icon: <MicVocal />,
-        title: "Career Opportunities in IT",
+        title: "DevTalk: Building a Thriving Career in a VUCA World",
         time: "11:00 am - 11:45 am",
-        location: "Ground Floor Seminar Hall",
-        description: "Career Opportunities in IT",
-        speaker: "Mr. Bheemaprakash",
+        description: "How to navigate and grow in a volatile, uncertain, complex, and ambiguous world.",
+        speaker: "Bheema Prakash Adkasthala, Head of Service Delivery, Ericsson India".
         type: "Talk",
       },
       {
         icon: <MicVocal />,
-        title: "AI Unleashed: Shaping Tomorrow's Technology",
+        title: "DevTalk: Will the real AI job please stand up?",
         time: "12:00 pm - 12:45 pm",
-        location: "Ground Floor Seminar Hall",
-        description: "A talk on AI",
-        speaker: "Shreekanth Shenoy",
+        description: "Exploring the evolving landscape of AI jobs and future opportunities.",
+        speaker: "Srikanth Shenoy, Co-Founder, Coachbuddy.AI",
         type: "Talk",
       },
       {
         icon: <Wrench />,
-        title: "Deep Dive into OpenCV",
-        time: "11:00 am - 1:00 pm",
-        location: "First Floor Seminar Hall",
-        description: "",
-        speaker: "Pranav Durai",
+        title: "Masterclass: Fundamentals of Image Processing and Computer Vision",
+        time: "11:30 am - 1:00 pm",
+        description: "Introduction to key techniques in image processing and computer vision.",
+        speaker: "Pranav Durai, Research Scholar, Stanford School of Medicine",
         type: "Workshop",
       },
       {
@@ -91,11 +87,10 @@ const scheduleData = [
       },
       {
         icon: <MicVocal />,
-        title: "RISC V : Redefining Computing",
-        time: "02:00 pm - 02:45 pm",
-        location: "Ground Floor Seminar Hall",
-        description: "",
-        speaker: "Suhas Kudlur",
+        title: "DevTalk: The Future of Computation",
+        time: "2:00 pm - 2:30 pm",
+        description: "How RISC-V is shaping the future of computational systems and innovation.",
+        speaker: "Suhas Kudlur Viswanath, Hardware Engineer, Arithmetic Labs",
         type: "Talk",
       },
       {
@@ -104,22 +99,38 @@ const scheduleData = [
         time: "03:00 pm - 03:45 pm",
         location: "Ground Floor Seminar Hall",
         description: "",
-        speaker: "Ester",
+        speaker: "Ester Raina Monterio",
         type: "Talk",
       },
       {
         icon: <Wrench />,
-        title: "Workshop: Ethical Hacking",
-        time: "02:00 pm - 4:30 pm",
-        location: "First Floor Seminar Hall",
-        description: "",
-        speaker: "Samrath",
+        title: "MasterClass: Ethical Hacking 101: Unleash Your Inner Hacker",
+        time: "2:00 pm - 4:00 pm",
+        description: "A hands-on session on ethical hacking and cybersecurity fundamentals.",
+        speaker: "Samrath Sudesh Acharya, Cyber Security Analyst, KPMG India",
         type: "Workshop",
+      },
+      // {
+      //   icon: <CookingPot />,
+      //   title: "Lunch Break",
+      //   time: "1:30 pm - 02:15 pm",
+      //   description: "",
+      //   speaker: "",
+      //   type: "",
+      // },
+
+      {
+        icon: <Gamepad2 />,
+        title: "Valorant",
+        time: "11:00 pm - 06:00 pm",
+        description: "TBA",
+        speaker: "Become the ultimate agent in our Valorant competition!",
+        type: "Competition",
       },
     ],
   },
   {
-    day: "8th November",
+    day: "8th Nov",
     events: [
       {
         icon: <SquareCode />,
@@ -196,7 +207,7 @@ const scheduleData = [
     ],
   },
   {
-    day: "9th November",
+    day: "9th Nov",
     events: [
       {
         icon: <BrainCircuit />,
@@ -231,44 +242,56 @@ const scheduleData = [
 
 const Schedule = () => {
   return (
-    <div className="overflow-hidden pt-20 pb-20">
-      <h1 className="select-none text-center text-3xl md:text-4xl font-semibold md:pb-10 pb-6">
+    <div className="overflow-hidden pt-16 md:pt-20 pb-16 md:pb-20">
+      <h1 className="select-none text-center text-2xl md:text-3xl lg:text-4xl font-semibold pb-4 md:pb-6 lg:pb-10">
         Schedule
       </h1>
-      <div className="mx-auto max-w-7xl px-5">
-        <Tabs defaultValue="7th November">
-          <div className="flex justify-center items-center">
-            <TabsList>
+      <div className="mx-auto max-w-7xl px-3 md:px-5">
+        <Tabs defaultValue="7th Nov" className="w-full">
+          <div className="flex justify-center items-center overflow-x-auto pb-2 md:pb-0">
+            <TabsList className="h-auto flex-wrap justify-center">
               {scheduleData.map((day) => (
-                <TabsTrigger key={day.day} value={day.day}>
+                <TabsTrigger 
+                  key={day.day} 
+                  value={day.day}
+                  className="px-2 py-1 md:px-4 md:py-2 text-sm md:text-base whitespace-nowrap"
+                >
                   {day.day.charAt(0).toUpperCase() + day.day.slice(1)}
                 </TabsTrigger>
               ))}
             </TabsList>
           </div>
           {scheduleData.map((day) => (
-            <TabsContent key={day.day} value={day.day} className="pt-10">
-              <div className="max-w-2xl mx-auto">
+            <TabsContent 
+              key={day.day} 
+              value={day.day} 
+              className="pt-6 md:pt-10"
+            >
+              <div className="max-w-2xl mx-auto px-2 md:px-0">
                 <ol className="relative border-s border-primary">
                   {day.events.map((event, index) => (
-                    <li key={index} className="mb-10 ms-10">
-                      <span className="absolute flex items-center justify-center w-10 h-10 bg-background rounded-full -start-5 ring-8 ring-background">
+                    <li key={index} className="mb-8 md:mb-10 ms-6 md:ms-10">
+                      <span className="absolute flex items-center justify-center w-8 h-8 md:w-10 md:h-10 bg-background rounded-full -start-4 md:-start-5 ring-4 md:ring-8 ring-background">
                         {event.icon}
                       </span>
-                      <div className="flex mb-2 items-center md:text-xl text-lg tracking-wider font-semibold">
-                        <span>
+                      <div className="flex flex-wrap gap-2 mb-1 md:mb-2 items-center text-base md:text-lg lg:text-xl tracking-wide md:tracking-wider font-semibold">
+                        <span className="break-words">
                           {event.title}{" "}
-                          {event.type && <Badge>{event.type}</Badge>}
+                          {event.type && (
+                            <Badge className="ml-0 mt-1 md:ml-2 md:mt-0 text-xs md:text-sm">
+                              {event.type}
+                            </Badge>
+                          )}
                         </span>
                       </div>
-                      <div className="mb-2 text-primary md:text-base text-sm tracking-wider">
+                      <div className="mb-1 md:mb-2 text-primary text-sm md:text-base tracking-wide md:tracking-wider break-words">
                         {event.speaker}
                       </div>
-                      <time className="block mb-2 font-normal leading-none text-white/60">
+                      <time className="block mb-1 md:mb-2 text-sm md:text-base font-normal leading-none text-white/60">
                         {event.time}
                       </time>
-                      <p className="text-base font-normal text-white/85">
-                        {event.location}
+                      <p className="text-sm md:text-base font-normal text-white/85">
+                        {event.description}
                       </p>
                     </li>
                   ))}
