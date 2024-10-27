@@ -12,7 +12,7 @@ export default function AboutDevhost() {
 
   const devhostData: DevhostData = {
     title: "About Devhost",
-    caption: "Where Curiosity Meets Expertise",
+    caption: "Expertise Redefined, Experience Reimagined.",
     about: "Devhost, the flagship event is a remarkable tech convergence by Sahyadri Open Source Community (SOSC), is set to be an exhilarating experience with an exciting mix of technical and non-technical events. It seeks to equip participants with knowledge and skills, while encouraging curiosity and fostering innovation. With a variety of tech and non-tech battles and events featuring dev talks and workshops led by industry experts, it creates opportunities for both personal development and self-exploration. Join the 22-hour live hack event to bring your ideas to fruition, with challenges designed for every level of experience.",
     logoSrc: "temp.jpg",
   };
