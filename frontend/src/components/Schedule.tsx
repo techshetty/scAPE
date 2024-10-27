@@ -50,6 +50,7 @@ const scheduleData = [
         location: "",
         description: "",
         speaker: "",
+        designation: "",
         type: "",
       },
       {
@@ -57,7 +58,9 @@ const scheduleData = [
         title: "Building a Thriving Career in a VUCA World",
         time: "11:00 am - 11:45 am",
         description: "How to navigate and grow in a volatile, uncertain, complex, and ambiguous world.",
-        speaker: "Bheema Prakash Adkasthala, Head of Service Delivery, Ericsson India",
+        speaker: "Bheema Prakash Adkasthala",
+        location:"Ground Floor Seminar Hall",
+        designation: "Head of Service Delivery, Ericsson India",
         type: "Talk",
       },
       {
@@ -65,7 +68,9 @@ const scheduleData = [
         title: "Will the real AI job please stand up?",
         time: "12:00 pm - 12:45 pm",
         description: "Exploring the evolving landscape of AI jobs and future opportunities.",
-        speaker: "Srikanth Shenoy, Co-Founder, Coachbuddy.AI",
+        speaker: "Srikanth Shenoy",
+        location:"Ground Floor Seminar Hall",
+        designation: "Co-Founder, Coachbuddy.AI",
         type: "Talk",
       },
       {
@@ -73,7 +78,9 @@ const scheduleData = [
         title: "Fundamentals of Image Processing and Computer Vision",
         time: "11:30 am - 1:00 pm",
         description: "Introduction to key techniques in image processing and computer vision.",
-        speaker: "Pranav Durai, Research Scholar, Stanford School of Medicine",
+        speaker: "Pranav Durai",
+        location:"First Floor Seminar Hall",
+        designation: "Research Scholar, Stanford School of Medicine",
         type: "Workshop",
       },
       {
@@ -83,6 +90,7 @@ const scheduleData = [
         location: "IS Lab",
         description: "",
         speaker: "",
+        designation: "",
         type: "Competition",
       },
       {
@@ -90,7 +98,9 @@ const scheduleData = [
         title: "The Future of Computation",
         time: "2:00 pm - 2:30 pm",
         description: "How RISC-V is shaping the future of computational systems and innovation.",
-        speaker: "Suhas Kudlur Viswanath, Hardware Engineer, Arithmetic Labs",
+        speaker: "Suhas Kudlur Viswanath",
+        location:"Ground Floor Seminar Hall",
+        designation: "Hardware Engineer, Arithmetic Labs",
         type: "Talk",
       },
       {
@@ -100,6 +110,7 @@ const scheduleData = [
         location: "Ground Floor Seminar Hall",
         description: "",
         speaker: "Ester Raina Monterio",
+        designation: "Data Scientist, Codecraft",
         type: "Talk",
       },
       {
@@ -107,19 +118,14 @@ const scheduleData = [
         title: "MasterClass: Ethical Hacking 101: Unleash Your Inner Hacker",
         time: "2:00 pm - 4:00 pm",
         description: "A hands-on session on ethical hacking and cybersecurity fundamentals.",
-        speaker: "Samrath Sudesh Acharya, Cyber Security Analyst, KPMG India",
+        speaker: "Samrath Sudesh Acharya",
+        location:"First Floor Seminar Hall",
+        designation: "Cyber Security Analyst, KPMG India",
         type: "Workshop",
       },
-      // {
-      //   icon: <CookingPot />,
-      //   title: "Lunch Break",
-      //   time: "1:30 pm - 02:15 pm",
-      //   description: "",
-      //   speaker: "",
-      //   type: "",
-      // },
     ],
-  },  {
+  },
+  {
     day: "8th Nov",
     events: [
       {
@@ -129,6 +135,7 @@ const scheduleData = [
         location: "Computer Lab 1",
         description: "",
         speaker: "",
+        designation: "",
         type: "Competition",
       },
       {
@@ -138,6 +145,7 @@ const scheduleData = [
         location: "Computer Lab 2",
         description: "",
         speaker: "",
+        designation: "",
         type: "Competition",
       },
       {
@@ -147,6 +155,7 @@ const scheduleData = [
         location: "Learning centre",
         description: "",
         speaker: "",
+        designation: "",
         type: "Competition",
       },
       {
@@ -156,15 +165,17 @@ const scheduleData = [
         location: "Computer Lab",
         description: "",
         speaker: "",
+        designation: "",
         type: "Competition",
       },
       {
         icon: <BrainCircuit />,
-        title: "PitchX -Tech Pitch",
+        title: "PitchX - Tech Pitch",
         time: "11:30 am - 1:30 pm",
         location: "First Floor Seminar Hall",
         description: "",
         speaker: "",
+        designation: "",
         type: "Competition",
       },
       {
@@ -174,6 +185,7 @@ const scheduleData = [
         location: "Fifth Floor CAD Lab",
         description: "",
         speaker: "",
+        designation: "",
         type: "Competition",
       },
       {
@@ -183,6 +195,7 @@ const scheduleData = [
         location: "Ground Floor Seminar Hall",
         description: "",
         speaker: "",
+        designation: "",
         type: "Hackathon",
       },
       {
@@ -192,6 +205,7 @@ const scheduleData = [
         location: "Skill Lab",
         description: "",
         speaker: "",
+        designation: "",
         type: "Hackathon",
       },
     ],
@@ -206,6 +220,7 @@ const scheduleData = [
         location: "",
         description: "",
         speaker: "",
+        designation: "",
         type: "Judging",
       },
       {
@@ -215,6 +230,7 @@ const scheduleData = [
         location: "Seminar Hall",
         description: "",
         speaker: "",
+        designation: "",
         type: "Presentation",
       },
       {
@@ -224,6 +240,7 @@ const scheduleData = [
         location: "Seminar Hall",
         description: "",
         speaker: "",
+        designation: "",
         type: "Ceremony",
       },
     ],
@@ -276,10 +293,20 @@ const Schedule = () => {
                       </div>
                       <div className="mb-1 md:mb-2 text-primary text-sm md:text-base tracking-wide md:tracking-wider break-words">
                         {event.speaker}
+                        {event.designation && (
+                          <div className="text-xs md:text-sm text-white/70">
+                            {event.designation}
+                          </div>
+                        )}
                       </div>
                       <time className="block mb-1 md:mb-2 text-sm md:text-base font-normal leading-none text-white/60">
-                        {event.time}
+                      {event.time}
                       </time>
+                      {event.location && (
+                        <div className="mt-2 text-sm md:text-base font-normal text-white/70">
+                          {event.location}
+                        </div>
+                      )}
                       <p className="text-sm md:text-base font-normal text-white/85">
                         {event.description}
                       </p>
