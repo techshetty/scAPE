@@ -57,7 +57,7 @@ const scheduleData = [
         title: "DevTalk: Building a Thriving Career in a VUCA World",
         time: "11:00 am - 11:45 am",
         description: "How to navigate and grow in a volatile, uncertain, complex, and ambiguous world.",
-        speaker: "Bheema Prakash Adkasthala, Head of Service Delivery, Ericsson India".
+        speaker: "Bheema Prakash Adkasthala, Head of Service Delivery, Ericsson India",
         type: "Talk",
       },
       {
@@ -128,8 +128,8 @@ const scheduleData = [
         type: "Competition",
       },
     ],
-  },
-  {
+
+  },  {
     day: "8th Nov",
     events: [
       {
