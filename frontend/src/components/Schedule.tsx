@@ -54,7 +54,7 @@ const scheduleData = [
       },
       {
         icon: <MicVocal />,
-        title: "DevTalk: Building a Thriving Career in a VUCA World",
+        title: "Building a Thriving Career in a VUCA World",
         time: "11:00 am - 11:45 am",
         description: "How to navigate and grow in a volatile, uncertain, complex, and ambiguous world.",
         speaker: "Bheema Prakash Adkasthala, Head of Service Delivery, Ericsson India",
@@ -62,7 +62,7 @@ const scheduleData = [
       },
       {
         icon: <MicVocal />,
-        title: "DevTalk: Will the real AI job please stand up?",
+        title: "Will the real AI job please stand up?",
         time: "12:00 pm - 12:45 pm",
         description: "Exploring the evolving landscape of AI jobs and future opportunities.",
         speaker: "Srikanth Shenoy, Co-Founder, Coachbuddy.AI",
@@ -70,7 +70,7 @@ const scheduleData = [
       },
       {
         icon: <Wrench />,
-        title: "Masterclass: Fundamentals of Image Processing and Computer Vision",
+        title: "Fundamentals of Image Processing and Computer Vision",
         time: "11:30 am - 1:00 pm",
         description: "Introduction to key techniques in image processing and computer vision.",
         speaker: "Pranav Durai, Research Scholar, Stanford School of Medicine",
@@ -87,7 +87,7 @@ const scheduleData = [
       },
       {
         icon: <MicVocal />,
-        title: "DevTalk: The Future of Computation",
+        title: "The Future of Computation",
         time: "2:00 pm - 2:30 pm",
         description: "How RISC-V is shaping the future of computational systems and innovation.",
         speaker: "Suhas Kudlur Viswanath, Hardware Engineer, Arithmetic Labs",
@@ -118,17 +118,7 @@ const scheduleData = [
       //   speaker: "",
       //   type: "",
       // },
-
-      {
-        icon: <Gamepad2 />,
-        title: "Valorant",
-        time: "11:00 pm - 06:00 pm",
-        description: "TBA",
-        speaker: "Become the ultimate agent in our Valorant competition!",
-        type: "Competition",
-      },
     ],
-
   },  {
     day: "8th Nov",
     events: [
