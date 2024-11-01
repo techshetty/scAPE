@@ -139,7 +139,7 @@ export default function Hero() {
                 </HoverBorderGradient>
               </Link>
 
-              {/* Hackathon Registration Button */}
+              {/* Hackathon Registration Button
               <a
                 href="https://unstop.com/o/PI6XorN"
                 target="_blank"
@@ -163,7 +163,7 @@ export default function Hero() {
                     <ArrowRightIcon />
                   </span>
                 </HoverBorderGradient>
-              </a>
+              </a> */}
             </div>
           </motion.div>
         </AnimatePresence>
