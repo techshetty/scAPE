@@ -48,17 +48,17 @@ export default function Events() {
       time: "10:30am - 12:00pm",
       imageSrc: "/events/ctf.jpg",
     },
-    {
-      id: 4,
-      title: "Sightless Syntax",
-      caption: "Are you a coding mastermind?",
-      description:
-        "Solve complex problems without tools and prove your mental acuity in this thrilling challenge.",
-      organizer: "Rithuparna K.S - 7019821295",
-      date: "8th Nov",
-      time: "12:00pm - 1:30pm",
-      imageSrc: "/events/SightlessSyntax.png",
-    },
+    // {
+    //   id: 4,
+    //   title: "Sightless Syntax",
+    //   caption: "Are you a coding mastermind?",
+    //   description:
+    //     "Solve complex problems without tools and prove your mental acuity in this thrilling challenge.",
+    //   organizer: "Rithuparna K.S - 7019821295",
+    //   date: "8th Nov",
+    //   time: "12:00pm - 1:30pm",
+    //   imageSrc: "/events/SightlessSyntax.png",
+    // },
     {
       id: 5,
       title: "PitchX",
@@ -144,7 +144,7 @@ export default function Events() {
       <h2 className="select-none text-center text-3xl md:text-4xl font-semibold md:pb-16 pb-10">
         {title}
       </h2>
-      <div className={`grid ${isSRC ? 'md:grid-cols-2 max-w-3xl mx-auto' : 'md:grid-cols-3'} grid-cols-1 gap-10`}>
+      <div className={`grid md:grid-cols-2 ${isSRC ? 'max-w-3xl mx-auto gap-10' : ' max-w-6xl mx-auto gap-12'} grid-cols-1`}>
         {events.map((card) => (
           <div
             key={card.id}
