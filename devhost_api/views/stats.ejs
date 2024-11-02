@@ -142,7 +142,7 @@
 		<div id="count">Total Registrations <span class="blink">:</span> <%= data.user_count %></div>
 		<div id="eventcont">
 			<% data.regDetails.forEach(event => { %>
-                <div class="item"><%= event.event_name %><span class="blink">:</span><%= event.regs %></div>
+                <div class="item"><%= event.event_name %><span class="blink">:</span><%= event.regs %> (Teams<span class="blink">:</span><%= event.teamc %>)</div>
                 <% }) %>
 		</div>
 	</div>

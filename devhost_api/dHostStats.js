@@ -22,9 +22,24 @@ async function regStats() {
             }},
             { $sort: { count: -1 } }
         ]);
+        const users = await User.find({}, { username: 1, eventDet: 1 }).lean();
+        const eventGroup = {};
+        users.forEach(user => {
+            user.eventDet.forEach(event => {
+                const { event_id, members } = event;
+                if (!eventGroup[event_id]) {
+                    eventGroup[event_id] = [];
+                }
+                eventGroup[event_id].push({
+                    username: user.username,
+                    members: members
+                });
+            });
+        });
         const fres = result.map(item => ({
             event_name: evn[item._id] || item._id,
-            regs: item.count
+            regs: item.count,
+            teamc: eventGroup[item._id].length
         }));
         const uc= await User.countDocuments();
         return {user_count: uc, regDetails: fres};
