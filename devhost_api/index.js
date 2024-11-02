@@ -10,7 +10,7 @@ const {regStats} = require('./dHostStats.js')
 const QRCode = require('qrcode');
 require('dotenv').config();
 require('./auth.js');
-// require('./grp.js');
+require('./grp.js');
 require('./dbInit');
 const cors = require('cors');
 const app = express();
@@ -54,7 +54,7 @@ app.get('/testend', (req, res) => {
 const priceMap = {
     "101": 200, "102": 200, "103": 200, "104": 200,
     "105": 300, "106": 500, "107": 500, "108": 300,
-    "109": 500, "110": 300,"111":300
+    "109": 500, "110": 400,"111":400
 };
 app.get('/update-details', isLoggedIn, (req, res) => {
     res.json("hello, " + req.user.username);
