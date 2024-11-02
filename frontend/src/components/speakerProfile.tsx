@@ -92,22 +92,22 @@ const speakers: SpeakerData[] = [
 ];
 
 const SpeakerProfile = ({ speaker, qrUrl }: { speaker: SpeakerData; qrUrl: string }) => (
-    <div className="p-4 sm:p-6 relative"> {/* Adjusted padding for better mobile view */}
+    <div className="p-4 sm:p-6 relative">
       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between">
         <div className="flex-1 sm:flex sm:items-start sm:space-x-6">
           <div className="mb-4 flex-shrink-0 sm:mb-0 sm:mr-4">
-            <Image 
-              src={speaker.imagePath} 
-              alt={speaker.name} 
-              width={140} 
-              height={140} 
-              className="rounded-lg object-cover shadow-lg" 
+            <Image
+              src={speaker.imagePath}
+              alt={speaker.name}
+              width={140}
+              height={140}
+              className="rounded-lg object-cover shadow-lg"
             />
           </div>
           <div className="flex flex-col">
-            <h1 className="text-xl sm:text-2xl font-bold text-[#b4ff39]">{speaker.name}</h1> {/* Adjusted font size for mobile */}
-            <p className="text-base sm:text-lg text-gray-300 mt-1">{speaker.position}</p> {/* Adjusted font size for mobile */}
-            <p className="text-base sm:text-lg text-gray-300 mt-1">Venue: {speaker.venue}</p> {/* Adjusted font size for mobile */}
+            <h1 className="text-xl sm:text-2xl font-bold text-[#b4ff39]">{speaker.name}</h1>
+            <p className="text-base sm:text-lg text-gray-300 mt-1">{speaker.position}</p>
+            <p className="text-base sm:text-lg text-gray-300 mt-1">Venue: {speaker.venue}</p>
             <Link href={speaker.linkedinUrl} target="_blank" rel="noopener noreferrer">
               <Button className="bg-[#2A2A2A] hover:bg-[#3A3A3A] text-white border border-[#b4ff39] hover:border-[#98d930] w-full sm:w-auto mt-4">
                 <Linkedin className="h-5 w-5 mr-2" /> Connect on LinkedIn
@@ -117,20 +117,25 @@ const SpeakerProfile = ({ speaker, qrUrl }: { speaker: SpeakerData; qrUrl: strin
         </div>
   
         {/* QR Code with Title */}
-        <div className="absolute right-4 sm:right-6 top-4 sm:top-6 flex-shrink-0">
+        <div className="absolute right-4 sm:right-6 top-4 sm:top-6 flex-shrink-0 mt-6 sm:mt-4">
           <div className="flex flex-col items-center space-y-2">
-            <div className="w-28 h-28 sm:w-32 sm:h-32 bg-white p-3 sm:p-4 rounded-lg shadow-lg"> {/* Adjusted sizes for QR code */}
-              {qrUrl && <img src={qrUrl} alt="QR Code" className="w-full h-full" />}
+            <div className="w-28 h-28 sm:w-32 sm:h-32 bg-white p-2 rounded-lg shadow-lg overflow-hidden"> {/* Adjusted padding */}
+              {qrUrl && (
+                <img
+                  src={qrUrl}
+                  alt="QR Code"
+                  className="w-full h-full object-cover transform scale-125" 
+                />
+              )}
             </div>
             <p className="text-sm text-gray-400 text-center font-medium">Scan to view profile</p>
           </div>
         </div>
       </div>
     </div>
-);
-
-
-
+  );
+  
+  
 export default function ProfilePage() {
   const [selectedSpeaker, setSelectedSpeaker] = useState<SpeakerData | null>(null);
   const [qrUrl, setQrUrl] = useState<string>('');
