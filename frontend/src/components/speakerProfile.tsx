@@ -124,25 +124,24 @@ const speakers: SpeakerData[] = [
           </div>
         </div>
   
-        <div className="absolute right-4 sm:right-6 top-8 sm:top-4 flex-shrink-0 mt-6 sm:mt-4">
+        <div className="absolute right-4 sm:right-6 top-7 sm:top-4 flex-shrink-0 mt-6 sm:mt-4">
           <div className="flex flex-col items-center space-y-2">
-            <div className="w-28 h-28 sm:w-32 sm:h-32 bg-white p-2 sm:p-1.5 rounded-lg shadow-lg overflow-hidden">
+            <div className="w-28 h-28 sm:w-32 sm:h-32 bg-white p-1 sm:p-2 rounded-lg shadow-lg overflow-hidden">
               {qrUrl && (
                 <img
                   src={qrUrl}
                   alt="QR Code"
-                  className="w-full h-full object-cover transform scale-135 sm:scale-125"
+                  className="w-full h-full object-cover transform scale-125 sm:scale-125"
                 />
               )}
             </div>
-            <p className="text-xs sm:text-sm text-gray-400 text-center font-medium mt-2">Scan to view profile</p>
           </div>
         </div>
       </div>
     </div>
   );
   
-
+  
 export default function ProfilePage() {
   const [selectedSpeaker, setSelectedSpeaker] = useState<SpeakerData | null>(null);
   const [qrUrl, setQrUrl] = useState<string>('');
