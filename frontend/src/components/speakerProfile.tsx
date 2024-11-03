@@ -156,7 +156,7 @@ export default function ProfilePage() {
     if (speaker) {
       setSelectedSpeaker(speaker);
       setUserExists(true);
-      QRCode.toDataURL(`${process.env.NEXT_PUBLIC_FRONTHOST}/profile?id=${speaker.id}`)
+      QRCode.toDataURL(`${process.env.NEXT_PUBLIC_FRONTHOST}/viewspeaker?id=${speaker.id}`)
         .then(url => setQrUrl(url));
     } else {
       setUserExists(false);
