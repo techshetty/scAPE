@@ -4,7 +4,6 @@ import { ArrowLeft } from "lucide-react";
 const SkeletonLoader = () => {
   return (
     <div className="min-h-screen bg-[#1E1E1E] text-white">
-      {/* Header with Loading Indicator */}
       <header className="bg-[#2A2A2A] shadow">
         <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           <div className="flex items-center space-x-2 text-[#b4ff39]">
@@ -14,7 +13,6 @@ const SkeletonLoader = () => {
         </div>
       </header>
 
-      {/* Main Skeleton Content */}
       <main className="w-full max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
         <div className="bg-[#2A2A2A] shadow rounded-lg overflow-hidden">
           {/* Speaker Profile Skeleton */}
@@ -31,14 +29,12 @@ const SkeletonLoader = () => {
               </div>
             </div>
 
-            {/* QR Code Skeleton */}
             <div className="flex-shrink-0 mt-6 sm:mt-4">
               <div className="w-28 h-28 bg-gray-700 rounded-lg" />
               <div className="h-4 bg-gray-700 w-3/4 rounded-md mt-2" />
             </div>
           </div>
 
-          {/* Session Details Skeleton */}
           <div className="border-t border-gray-700">
             <div className="p-6 sm:p-8 space-y-6">
               <div className="h-8 bg-gray-700 w-1/4 rounded-md" />
