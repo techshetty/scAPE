@@ -122,6 +122,7 @@ export const COLLEGES = [
   "K.L.S's Vishwanathrao Deshpande Rural Institute of Technology, Haliyala",
   "K.S School Of Engineering, Mallasandra, Bangalore.",
   "K.S. Institute of Technology, Raghuvanahalli, Kanakapura Main Raod, Bangalore",
+  "K.V.G College of Engineering, Sullia",
   "Kalpataru Institute of Technology, Tiptur",
   "Karavali Institute, of Technology, Neermarga, Mangalore",
   "KCT Engineering College, Gulbarga (Religious Minority) (MUSLIM)",
