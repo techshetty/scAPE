@@ -99,7 +99,7 @@ const speakers: SpeakerData[] = [
     }
   ];  
 
-const SpeakerProfile = ({ speaker, qrUrl }: { speaker: SpeakerData; qrUrl: string }) => (
+  const SpeakerProfile = ({ speaker, qrUrl }: { speaker: SpeakerData; qrUrl: string }) => (
     <div className="p-4 sm:p-6 relative">
       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between">
         <div className="flex-1 sm:flex sm:items-start sm:space-x-6">
@@ -107,15 +107,15 @@ const SpeakerProfile = ({ speaker, qrUrl }: { speaker: SpeakerData; qrUrl: strin
             <Image
               src={speaker.imagePath}
               alt={speaker.name}
-              width={140}
-              height={140}
+              width={120}
+              height={120}
               className="rounded-lg object-cover shadow-lg"
             />
           </div>
           <div className="flex flex-col">
-            <h1 className="text-xl sm:text-2xl font-bold text-[#b4ff39]">{speaker.name}</h1>
-            <p className="text-base sm:text-lg text-gray-300 mt-1">{speaker.position}</p>
-            <p className="text-base sm:text-lg text-gray-300 mt-1">Venue: {speaker.venue}</p>
+            <h1 className="text-lg sm:text-2xl font-bold text-[#b4ff39]">{speaker.name}</h1>
+            <p className="text-sm sm:text-lg text-gray-300 mt-1">{speaker.position}</p>
+            <p className="text-sm sm:text-lg text-gray-300 mt-1">Venue: {speaker.venue}</p>
             <Link href={speaker.linkedinUrl} target="_blank" rel="noopener noreferrer">
               <Button className="bg-[#2A2A2A] hover:bg-[#3A3A3A] text-white border border-[#b4ff39] hover:border-[#98d930] w-full sm:w-auto mt-4">
                 <Linkedin className="h-5 w-5 mr-2" /> Connect on LinkedIn
@@ -123,26 +123,26 @@ const SpeakerProfile = ({ speaker, qrUrl }: { speaker: SpeakerData; qrUrl: strin
             </Link>
           </div>
         </div>
-
-        <div className="absolute right-4 sm:right-6 top-4 sm:top-6 flex-shrink-0 mt-6 sm:mt-4">
+  
+        <div className="absolute right-4 sm:right-6 top-8 sm:top-4 flex-shrink-0 mt-6 sm:mt-4">
           <div className="flex flex-col items-center space-y-2">
-            <div className="w-28 h-28 sm:w-32 sm:h-32 bg-white p-2 rounded-lg shadow-lg overflow-hidden"> 
+            <div className="w-28 h-28 sm:w-32 sm:h-32 bg-white p-2 sm:p-1.5 rounded-lg shadow-lg overflow-hidden">
               {qrUrl && (
                 <img
                   src={qrUrl}
                   alt="QR Code"
-                  className="w-full h-full object-cover transform scale-125" 
+                  className="w-full h-full object-cover transform scale-135 sm:scale-125"
                 />
               )}
             </div>
-            <p className="text-sm text-gray-400 text-center font-medium">Scan to view profile</p>
+            <p className="text-xs sm:text-sm text-gray-400 text-center font-medium mt-2">Scan to view profile</p>
           </div>
         </div>
       </div>
     </div>
   );
   
-  
+
 export default function ProfilePage() {
   const [selectedSpeaker, setSelectedSpeaker] = useState<SpeakerData | null>(null);
   const [qrUrl, setQrUrl] = useState<string>('');
@@ -169,9 +169,8 @@ export default function ProfilePage() {
   return (
     <div className="min-h-screen bg-[#1E1E1E] text-white relative">
       <CursorTrailCanvas className="pointer-events-none z-50 md:flex hidden fixed inset-0 h-full w-full" />
-      {/* Header */}
       <header className="bg-[#2A2A2A] shadow sticky top-0 z-10">
-        <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+        <div className="max-w-7xl mx-auto py-3 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           <Link href="/" className="flex items-center space-x-2 text-[#b4ff39] hover:opacity-80 transition-opacity">
             <ArrowLeft className="h-5 w-5" /> <span>Back to Speakers</span>
           </Link>
@@ -183,38 +182,38 @@ export default function ProfilePage() {
           {/* Session Details Section */}
           <div className="border-t border-gray-700">
             <div className="p-6 sm:p-8 space-y-6">
-              <h2 className="text-xl sm:text-2xl font-semibold text-[#b4ff39]"> Session Details </h2>
-              <div className="bg-[#232323] rounded-lg p-6 space-y-6">
-                <div className="space-y-4">
-                  <h3 className="text-xl font-semibold text-[#b4ff39]"> {selectedSpeaker.talkTitle} </h3>
-                  <p className="text-gray-300"> {selectedSpeaker.description} </p>
+              <h2 className="text-lg sm:text-2xl font-semibold text-[#b4ff39]"> Session Details </h2>
+              <div className="bg-[#232323] rounded-lg p-4 sm:p-6 space-y-6">
+                <div className="space-y-2 sm:space-y-4">
+                  <h3 className="text-lg sm:text-xl font-semibold text-[#b4ff39]"> {selectedSpeaker.talkTitle} </h3>
+                  <p className="text-sm sm:text-base text-gray-300"> {selectedSpeaker.description} </p>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                  <div className="flex items-center space-x-3 bg-[#2A2A2A] p-3 rounded-lg">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4">
+                  <div className="flex items-center space-x-3 bg-[#2A2A2A] p-2 sm:p-3 rounded-lg">
                     <Users className="h-5 w-5 text-[#b4ff39]" />
                     <div>
-                      <div className="text-sm text-gray-400">Type</div>
+                      <div className="text-xs sm:text-sm text-gray-400">Type</div>
                       <div className="text-white">{selectedSpeaker.talkType}</div>
                     </div>
                   </div>
-                  <div className="flex items-center space-x-3 bg-[#2A2A2A] p-3 rounded-lg">
+                  <div className="flex items-center space-x-3 bg-[#2A2A2A] p-2 sm:p-3 rounded-lg">
                     <Clock className="h-5 w-5 text-[#b4ff39]" />
                     <div>
-                      <div className="text-sm text-gray-400">Time</div>
+                      <div className="text-xs sm:text-sm text-gray-400">Time</div>
                       <div className="text-white">{selectedSpeaker.time}</div>
                     </div>
                   </div>
-                  <div className="flex items-center space-x-3 bg-[#2A2A2A] p-3 rounded-lg">
+                  <div className="flex items-center space-x-3 bg-[#2A2A2A] p-2 sm:p-3 rounded-lg">
                     <Calendar className="h-5 w-5 text-[#b4ff39]" />
                     <div>
-                      <div className="text-sm text-gray-400">Date</div>
+                      <div className="text-xs sm:text-sm text-gray-400">Date</div>
                       <div className="text-white">Nov 7, 2024</div>
                     </div>
                   </div>
-                  <div className="flex items-center space-x-3 bg-[#2A2A2A] p-3 rounded-lg">
+                  <div className="flex items-center space-x-3 bg-[#2A2A2A] p-2 sm:p-3 rounded-lg">
                     <MapPin className="h-5 w-5 text-[#b4ff39]" />
                     <div>
-                      <div className="text-sm text-gray-400">Venue</div>
+                      <div className="text-xs sm:text-sm text-gray-400">Venue</div>
                       <div className="text-white">{selectedSpeaker.venue}</div>
                     </div>
                   </div>
