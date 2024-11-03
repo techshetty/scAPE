@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, Users, Calendar, MapPin, Linkedin, Clock } from "lucide-react";
 import dynamic from "next/dynamic";
+import SkeletonLoader from "@/app/viewspeaker/loading";
 
 const CursorTrailCanvas = dynamic(() => import('@/components/CursorTrailCanvas'), { ssr: false });
 
@@ -20,76 +21,83 @@ interface SpeakerData {
   linkedinUrl: string;
   imagePath: string;
   venue: string;
+  time: string;
 }
 
 const speakers: SpeakerData[] = [
-  {
-    id: "001",
-    name: "Bheema Prakash Adkasthala",
-    position: "Head of Service Delivery, Ericsson India",
-    talkTitle: "Building a Thriving Career in a VUCA World",
-    talkType: "Talk",
-    description: "Learn strategies to adapt and excel in a rapidly changing, volatile, and uncertain business world.",
-    linkedinUrl: "https://linkedin.com/in/bheema-adkasthala",
-    imagePath: "/speakers/Bheema.png",
-    venue: "Main Auditorium"
-  },
-  {
-    id: "002",
-    name: "Srikanth Shenoy",
-    position: "Co-Founder, Coachbuddy.AI",
-    talkTitle: "Will the real AI job please stand up?",
-    talkType: "Talk",
-    description: "Uncover the truth behind AI roles and gain insights into the evolving job market in artificial intelligence.",
-    linkedinUrl: "https://linkedin.com/in/srikanth-shenoy",
-    imagePath: "/speakers/Srikanth.png",
-    venue: "Conference Room A"
-  },
-  {
-    id: "003",
-    name: "Pranav Durai",
-    position: "Research Scholar, Stanford School of Medicine",
-    talkTitle: "Fundamentals of Image Processing and Computer Vision",
-    talkType: "Workshop",
-    description: "Gain hands-on experience with foundational techniques in image processing and computer vision.",
-    linkedinUrl: "https://linkedin.com/in/pranav-durai",
-    imagePath: "/speakers/PranavDurai.png",
-    venue: "Workshop Hall 1"
-  },
-  {
-    id: "004",
-    name: "Suhas Kudlur Viswanath",
-    position: "Hardware Engineer, Arithmetic Labs",
-    talkTitle: "The Future of Computation",
-    talkType: "Talk",
-    description: "Explore emerging trends in computation and the role of hardware in future technological advancements.",
-    linkedinUrl: "https://linkedin.com/in/suhas-viswanath",
-    imagePath: "/speakers/SuhasViswanath.png",
-    venue: "Innovation Center"
-  },
-  {
-    id: "005",
-    name: "Ester Raina Monterio",
-    position: "Data Scientist, Codecraft",
-    talkTitle: "Data Science: The Magic Behind the Metrics",
-    talkType: "Talk",
-    description: "Discover how data science is transforming industries by turning raw data into actionable insights.",
-    linkedinUrl: "https://linkedin.com/in/ester-monterio",
-    imagePath: "/speakers/EsterMonterio.png",
-    venue: "Data Lab"
-  },
-  {
-    id: "006",
-    name: "Samrath Sudesh Acharya",
-    position: "Cyber Security Analyst, KPMG India",
-    talkTitle: "Ethical Hacking 101: Unleash Your Inner Hacker",
-    talkType: "Workshop",
-    description: "Learn the basics of ethical hacking and gain practical skills to strengthen cybersecurity.",
-    linkedinUrl: "https://linkedin.com/in/samrath-acharya",
-    imagePath: "/events/SamrathAcharya.png",
-    venue: "Security Workshop Room"
-  }
-];
+    {
+      id: "001",
+      name: "Bheema Prakash Adkasthala",
+      position: "Head of Service Delivery, Ericsson India",
+      talkTitle: "Building a Thriving Career in a VUCA World",
+      talkType: "Talk",
+      description: "How to navigate and grow in a volatile, uncertain, complex, and ambiguous world.",
+      linkedinUrl: "https://linkedin.com/in/bheema-adkasthala",
+      imagePath: "/speakers/Bheema.png",
+      venue: "Ground Floor Seminar Hall",
+      time: "11:00 am - 11:45 am"
+    },
+    {
+      id: "002",
+      name: "Srikanth Shenoy",
+      position: "Co-Founder, Coachbuddy.AI",
+      talkTitle: "Will the real AI job please stand up?",
+      talkType: "Talk",
+      description: "Exploring the evolving landscape of AI jobs and future opportunities.",
+      linkedinUrl: "https://linkedin.com/in/srikanth-shenoy",
+      imagePath: "/speakers/Srikanth.png",
+      venue: "Ground Floor Seminar Hall",
+      time: "12:00 pm - 12:45 pm"
+    },
+    {
+      id: "003",
+      name: "Pranav Durai",
+      position: "Research Scholar, Stanford School of Medicine",
+      talkTitle: "Fundamentals of Image Processing and Computer Vision",
+      talkType: "Workshop",
+      description: "Introduction to key techniques in image processing and computer vision.",
+      linkedinUrl: "https://linkedin.com/in/pranav-durai",
+      imagePath: "/speakers/PranavDurai.png",
+      venue: "First Floor Seminar Hall",
+      time: "11:30 am - 1:00 pm"
+    },
+    {
+      id: "004",
+      name: "Suhas Kudlur Viswanath",
+      position: "Hardware Engineer, Arithmetic Labs",
+      talkTitle: "The Future of Computation",
+      talkType: "Talk",
+      description: "How RISC-V is shaping the future of computational systems and innovation.",
+      linkedinUrl: "https://linkedin.com/in/suhas-viswanath",
+      imagePath: "/speakers/SuhasViswanath.png",
+      venue: "Ground Floor Seminar Hall",
+      time: "2:00 pm - 2:30 pm"
+    },
+    {
+      id: "005",
+      name: "Ester Raina Monterio",
+      position: "Data Scientist, Codecraft",
+      talkTitle: "Data Science: The Magic Behind the Metrics",
+      talkType: "Talk",
+      description: "Discover how data science is transforming industries by turning raw data into actionable insights.",
+      linkedinUrl: "https://linkedin.com/in/ester-monterio",
+      imagePath: "/speakers/EsterMonterio.png",
+      venue: "Ground Floor Seminar Hall",
+      time: "03:00 pm - 03:45 pm"
+    },
+    {
+      id: "006",
+      name: "Samrath Sudesh Acharya",
+      position: "Cyber Security Analyst, KPMG India",
+      talkTitle: "Ethical Hacking 101: Unleash Your Inner Hacker",
+      talkType: "Workshop",
+      description: "A hands-on session on ethical hacking and cybersecurity fundamentals.",
+      linkedinUrl: "https://linkedin.com/in/samrath-acharya",
+      imagePath: "/events/SamrathAcharya.png",
+      venue: "First Floor Seminar Hall",
+      time: "2:00 pm - 4:00 pm"
+    }
+  ];  
 
 const SpeakerProfile = ({ speaker, qrUrl }: { speaker: SpeakerData; qrUrl: string }) => (
     <div className="p-4 sm:p-6 relative">
@@ -115,11 +123,10 @@ const SpeakerProfile = ({ speaker, qrUrl }: { speaker: SpeakerData; qrUrl: strin
             </Link>
           </div>
         </div>
-  
-        {/* QR Code with Title */}
+
         <div className="absolute right-4 sm:right-6 top-4 sm:top-6 flex-shrink-0 mt-6 sm:mt-4">
           <div className="flex flex-col items-center space-y-2">
-            <div className="w-28 h-28 sm:w-32 sm:h-32 bg-white p-2 rounded-lg shadow-lg overflow-hidden"> {/* Adjusted padding */}
+            <div className="w-28 h-28 sm:w-32 sm:h-32 bg-white p-2 rounded-lg shadow-lg overflow-hidden"> 
               {qrUrl && (
                 <img
                   src={qrUrl}
@@ -157,7 +164,7 @@ export default function ProfilePage() {
   }, []);
 
   if (!userExists) return <NoUserFound />;
-  if (!selectedSpeaker) return <div>Loading...</div>;
+  if (!selectedSpeaker) return <SkeletonLoader />;
 
   return (
     <div className="min-h-screen bg-[#1E1E1E] text-white relative">
@@ -193,8 +200,8 @@ export default function ProfilePage() {
                   <div className="flex items-center space-x-3 bg-[#2A2A2A] p-3 rounded-lg">
                     <Clock className="h-5 w-5 text-[#b4ff39]" />
                     <div>
-                      <div className="text-sm text-gray-400">Duration</div>
-                      <div className="text-white">45 mins</div>
+                      <div className="text-sm text-gray-400">Time</div>
+                      <div className="text-white">{selectedSpeaker.time}</div>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3 bg-[#2A2A2A] p-3 rounded-lg">
