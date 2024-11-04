@@ -2,4 +2,6 @@
 /frontend/.ENV
 /devhost_api/node_modules
 /devhost_api/grp.js
+/devhost_api/fig_aut.js
 /devhost_api/tempfiles/
+/devhost_api/qrcodes/
