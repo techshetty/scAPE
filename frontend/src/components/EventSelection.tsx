@@ -349,7 +349,7 @@ export default function EventSelection() {
           {EVENTS.map((event: Event) => (
             <div
               key={event.event_id}
-              className={`bg-[#222222] rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden ${regEvents.includes(event.event_id) ? "opacity-50 pointer-events-none" : ""}`}
+              className={`bg-[#222222] rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden ${regEvents.includes(event.event_id) ? "opacity-50 pointer-events-none" : ""} ${parseInt(event.event_id)>=108? "opacity-50 pointer-events-none" : ""}`}
             >
               <div
                 className="flex items-center justify-between p-4 cursor-pointer"
@@ -368,14 +368,19 @@ export default function EventSelection() {
                     )}
                   </div>
                   <div className="flex-1">
-                    <h3 className={`font-semibold text-lg ${parseInt(event.event_id)>=108? "text-[#00ffff]":"text-[#aef737]"}`}>{event.name}</h3>
+                    <h3 className={`font-semibold text-lg ${parseInt(event.event_id)>=108? "text-[#00ffff]":"text-[#aef737]"}`}>{event.name+(parseInt(event.event_id)>=108?"-[Spot registration available]":"")}</h3>
+                    {parseInt(event.event_id) >= 108 && (
+                    <div className="text-sm text-[#fff] opacity-100 ">
+                    Contact: +91 9606408688
+                  </div>
+                    )}
                     <p className="text-sm text-white">{event.description}</p>
                     <p className="text-sm text-[#a0a0a0]">Date: {event.date}</p>
                     <p className="text-sm text-[#a0a0a0]">Time: {event.time}</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
-                  <div className={`${parseInt(event.event_id)>=108? "text-[#00ffff]":"text-[#aef737]"} text-lg font-bold`}>₹{event.price}</div>
+                  <div className={`${parseInt(event.event_id)>=108? "text-[#00ffff] line-through":"text-[#aef737]"} text-lg font-bold`} style={parseInt(event.event_id)>=108?{textDecorationColor: "red",textDecorationThickness: "4px"}:{}}>₹{event.price}</div>
                   {selectedEvents[event.event_id]?.selected ? (
                     <ChevronUp className="w-6 h-6 text-[#d4d4d4]" />
                   ) : (

@@ -32,7 +32,7 @@ export default function Events() {
       caption: "Unleash Your Coding Prowess",
       description:
         "Take on the ultimate coding challenge and prove your skills against top minds in the field.",
-      organizer: "Nithesh Alva - 7484775694",
+      organizer: "Nithesh Alva - 7483775694",
       date: "8th Nov",
       time: "9:00am - 11:00am",
       imageSrc: "/events/CodeForge.png",
