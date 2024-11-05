@@ -93,7 +93,7 @@ const speakers: SpeakerData[] = [
       talkType: "Workshop",
       description: "A hands-on session on ethical hacking and cybersecurity fundamentals.",
       linkedinUrl: "https://www.linkedin.com/in/samrath-sudesh-acharya?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-      imagePath: "/events/SamrathAcharya.png",
+      imagePath: "/speakers/SamrathAcharya.png",
       venue: "First Floor Seminar Hall",
       time: "2:00 pm - 4:00 pm"
     }
