@@ -1,6 +1,7 @@
 "use client";
 
 import Counter from "@/components/Counter";
+import HacknightCounter from "@/components/HacknightCounter"
 import CursorTrailCanvas from "@/components/CursorTrailCanvas";
 import Events from "@/components/Events";
 import Gallery from "@/components/Gallery";
@@ -44,6 +45,7 @@ export default function Home() {
           ></Image>
         </div>
         <Counter />
+        {/* <HacknightCounter/> */}
         <Schedule />
         <AboutDevhost />
         <AboutSRC />
