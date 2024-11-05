@@ -32,7 +32,7 @@ const speakers: SpeakerData[] = [
       talkTitle: "Building a Thriving Career in a VUCA World",
       talkType: "Talk",
       description: "How to navigate and grow in a volatile, uncertain, complex, and ambiguous world.",
-      linkedinUrl: "https://linkedin.com/in/bheema-adkasthala",
+      linkedinUrl: "https://www.linkedin.com/in/bheemaprakash?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       imagePath: "/speakers/Bheema.png",
       venue: "Ground Floor Seminar Hall",
       time: "11:00 am - 11:45 am"
@@ -44,7 +44,7 @@ const speakers: SpeakerData[] = [
       talkTitle: "Will the real AI job please stand up?",
       talkType: "Talk",
       description: "Exploring the evolving landscape of AI jobs and future opportunities.",
-      linkedinUrl: "https://linkedin.com/in/srikanth-shenoy",
+      linkedinUrl: "https://www.linkedin.com/in/srikanthshenoy?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       imagePath: "/speakers/Srikanth.png",
       venue: "Ground Floor Seminar Hall",
       time: "12:00 pm - 12:45 pm"
@@ -56,7 +56,7 @@ const speakers: SpeakerData[] = [
       talkTitle: "Fundamentals of Image Processing and Computer Vision",
       talkType: "Workshop",
       description: "Introduction to key techniques in image processing and computer vision.",
-      linkedinUrl: "https://linkedin.com/in/pranav-durai",
+      linkedinUrl: "https://www.linkedin.com/in/pranav-durai?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       imagePath: "/speakers/PranavDurai.png",
       venue: "First Floor Seminar Hall",
       time: "11:30 am - 1:00 pm"
@@ -68,7 +68,7 @@ const speakers: SpeakerData[] = [
       talkTitle: "The Future of Computation",
       talkType: "Talk",
       description: "How RISC-V is shaping the future of computational systems and innovation.",
-      linkedinUrl: "https://linkedin.com/in/suhas-viswanath",
+      linkedinUrl: "https://www.linkedin.com/in/suhas-kudlur-viswanath-33aa971ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       imagePath: "/speakers/SuhasViswanath.png",
       venue: "Ground Floor Seminar Hall",
       time: "2:00 pm - 2:30 pm"
@@ -80,7 +80,7 @@ const speakers: SpeakerData[] = [
       talkTitle: "Data Science: The Magic Behind the Metrics",
       talkType: "Talk",
       description: "Discover how data science is transforming industries by turning raw data into actionable insights.",
-      linkedinUrl: "https://linkedin.com/in/ester-monterio",
+      linkedinUrl: "https://www.linkedin.com/in/esther-raina-monteiro-4342161b6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       imagePath: "/speakers/EsterMonterio.png",
       venue: "Ground Floor Seminar Hall",
       time: "03:00 pm - 03:45 pm"
@@ -92,8 +92,8 @@ const speakers: SpeakerData[] = [
       talkTitle: "Ethical Hacking 101: Unleash Your Inner Hacker",
       talkType: "Workshop",
       description: "A hands-on session on ethical hacking and cybersecurity fundamentals.",
-      linkedinUrl: "https://linkedin.com/in/samrath-acharya",
-      imagePath: "/events/SamrathAcharya.png",
+      linkedinUrl: "https://www.linkedin.com/in/samrath-sudesh-acharya?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      imagePath: "/speakers/SamrathAcharya.png",
       venue: "First Floor Seminar Hall",
       time: "2:00 pm - 4:00 pm"
     }
