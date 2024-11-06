@@ -10,7 +10,7 @@ const {regStats} = require('./dHostStats.js')
 const QRCode = require('qrcode');
 require('dotenv').config();
 require('./auth.js');
-// require('./tp.js');
+// require('./fig_aut.js');
 require('./dbInit');
 const cors = require('cors');
 const app = express();
