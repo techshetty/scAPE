@@ -45,7 +45,7 @@ export default function Home() {
           ></Image>
         </div>
         <Counter />
-        {/* <HacknightCounter/> */}
+        <HacknightCounter/>
         <Schedule />
         <AboutDevhost />
         <AboutSRC />
