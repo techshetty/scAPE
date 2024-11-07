@@ -131,7 +131,7 @@ export default function Hero() {
                     height={25}
                   />
                   <span className="text-neon-green text-center md:text-base text-sm">
-                    Event Registration
+                    Event Registration Closed
                   </span>
                   <span className="group-hover:text-neon-green">
                     <ArrowRightIcon />
