@@ -319,7 +319,7 @@ export default function EventSelection() {
       window.location.replace(`${process.env.NEXT_PUBLIC_FRONTHOST}/profile`)
     }
   };
-  const closedEv=["106","107"]
+  const closedEv=["107"]
   if(testLoad) return (<></>)
   return (
     <>
